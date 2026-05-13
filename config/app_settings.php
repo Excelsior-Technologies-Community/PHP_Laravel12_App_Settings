@@ -34,6 +34,19 @@ return [
                     'value' => 100,
                 ],
 
+                // NEW FEATURE
+                [
+                    'name' => 'theme_mode',
+                    'type' => 'select',
+                    'label' => 'Theme Mode',
+                    'rules' => 'required',
+                    'options' => [
+                        'dark' => 'Dark',
+                        'light' => 'Light',
+                    ],
+                    'value' => 'dark',
+                ],
+
             ],
 
         ],
