@@ -8,5 +8,4 @@ Route::get('/', function () {
 });
 
 Route::get('/settings', [SettingsController::class, 'index']);
-
 Route::post('/settings', [SettingsController::class, 'store']);
