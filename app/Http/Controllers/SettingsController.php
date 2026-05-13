@@ -14,6 +14,7 @@ class SettingsController extends Controller
     public function store(Request $request)
     {
         // VALIDATION
+        
         $request->validate([
             'app_name' => 'required|min:2|max:50',
             'app_email' => 'required|email',
@@ -23,6 +24,7 @@ class SettingsController extends Controller
         ]);
 
         // SAVE SETTINGS
+
         setting()->set('app_name', $request->app_name);
 
         setting()->set('app_email', $request->app_email);
@@ -32,6 +34,7 @@ class SettingsController extends Controller
         setting()->set('theme_mode', $request->theme_mode);
 
         // LOGO UPLOAD
+
         if ($request->hasFile('app_logo')) {
 
             $logo = $request->file('app_logo')
